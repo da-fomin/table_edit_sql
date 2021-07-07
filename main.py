@@ -5,8 +5,8 @@ import pandas as pd
 from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTableWidgetItem, QFrame
 
-pd.options.display.expand_frame_repr = False
 
+# pd.options.display.expand_frame_repr = False
 
 class MainApp(QMainWindow):
     def __init__(self):
@@ -79,7 +79,7 @@ class MainApp(QMainWindow):
         df.pop('Дата_Время')
         # Пересортировка колонок для вывода
         df = df[['Телефон', 'Дата', 'Время', 'Услуга', 'ФИО_клиента', 'Сумма', 'Комментарий']]
-        # *****************************************************
+
         self.tableWidget.setColumnCount(len(df.columns))
         self.tableWidget.setRowCount(len(df.index))
         self.tableWidget.setHorizontalHeaderLabels(list(df.columns.values))
@@ -98,7 +98,6 @@ class MainApp(QMainWindow):
         self.hns.clear()
         self.tableWidget.setEnabled(True)
 
-    # ***********************Открываем без возможности редактирования******************************
     def data_selection_2(self):  # ORDER BY DESC / ASC (сортировка по убыванию / возрастанию
         self.tableWidget.clear()
         sql_txt = "SELECT * FROM Marakuya WHERE [Услуга] = '{}' ORDER BY [Дата_Время] ASC".format(
@@ -115,8 +114,6 @@ class MainApp(QMainWindow):
                 """Выравнивание таблицы"""
                 self.tableWidget.resizeColumnsToContents()
         self.tableWidget.setEnabled(False)
-
-    # *****************************************************
 
     def action_cell(self):
         if self.tableWidget.isEnabled() and self.tableWidget.currentRow() != -1 and self.tableWidget.currentColumn() != -1:
