@@ -12,12 +12,11 @@
     * во время запроса колонка DateTime разделяется на две части и выводится в поле tableWidget;
     * при сохранении данных колонки Дата и Время снова объединяются в одну колонку DateTime.
 
+![Image alt](https://github.com/da-fomin/table_edit_sql/blob/master/image/Edit.png)
+
+
 2) Запрос в БД для чтения:
     * чтение данных с БД осуществляется без какого либо изменения и сразу выводится в tableWidget;
     * поле tableWidget блокируется для редактирования.
-    
-
-![Image alt](https://github.com/da-fomin/table_edit_sql/blob/master/image/Edit.png)
-
 
 ![Image alt](https://github.com/da-fomin/table_edit_sql/blob/master/image/Read.png)
