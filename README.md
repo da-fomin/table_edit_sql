@@ -17,3 +17,7 @@
     * поле tableWidget блокируется для редактирования.
     
 
+![Image alt](https://github.com/da-fomin/table_edit_sql/blob/master/image/Edit.png)
+
+
+![Image alt](https://github.com/da-fomin/table_edit_sql/blob/master/image/Read.png)
